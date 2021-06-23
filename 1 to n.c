@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -11,9 +11,9 @@ printf("\n Even Numbers between 1 and %d are : \n", number);
 for(i = 1; i <= number; i++)
 {
     if ( i % 2 == 0 ) 
-    {  
-        printf(" %d\t", i);
-    }
+	{
+		printf(" %d\t", i);
+	}
 }
 
 return 0;
