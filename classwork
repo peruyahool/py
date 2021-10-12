@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class Time
+{
+int hr,mm,sec;
+public:
+Time():hr(0),mm(0),sec(0){ }
+Time(int a,int b,int c):hr(a)
+{mm=b; sec=c; }	
+void disp(){ cout<<endl<<hr<<":"<<mm<<":"<<sec<<endl;
+}
+void addTime(Time t1,Time t2)
+{ sec=t1.sec+t2.sec;
+  if(sec>60){mm++;sec=sec%60;  }
+  mm+=t1.mm+t2.mm;
+  if(mm>60){hr++;mm=mm%60;  }
+  hr+=t1.hr+t2.hr;
+}
+};
+int main(int argc, char** argv) {
+Time t3;
+int a,b,c;
+cout<<"enter time 1 : ";
+//cin>>a>>b>>c;
+//Time t1(a,b,c);
+Time t1(1,23,45);
+cin>>a>>b>>c;
+Time t2(a,b,c);
+t3.addTime(t1,t2);
+t3.disp();
+	return 0;
+}
